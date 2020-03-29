@@ -4,24 +4,18 @@ import './App.css';
 
 
 class App extends Component {
+   value1=Math.floor(Math.random() * 100);
+   value2=Math.floor(Math.random() * 100);
+   value3=Math.floor(Math.random() * 100);
+   proposedAnswer=(Math.floor(Math.random()*3) + ( this.value1 + this.value2 + this.value3));
   state={
-    value1: Math.floor(Math.random() * 100),
-    value2: Math.floor(Math.random() * 100),
-	value3: Math.floor(Math.random() * 100),
-    proposedAnswer:  0,
+    value1: this.value1,
+    value2: this.value2,
+	value3: this.value3,
+    proposedAnswer:  this.proposedAnswer,
     numQuestions: 0,
     numCorrect: 0
   }
-
-constructor(props){
-  super(props);
-  this.setState(
-    {
-      proposedAnswer:(Math.floor(Math.random()*3) + ( this.state.value1 + this.state.value2 + this.state.value3))
-    }
-    );
-  
-}
 
 validateTrue=()=>{
   
