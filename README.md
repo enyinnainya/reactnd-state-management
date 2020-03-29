@@ -1,0 +1,1 @@
+This React App  is a Game that allows user to answer trivial question of randomly generated equation and return total point scored by user for each interval
